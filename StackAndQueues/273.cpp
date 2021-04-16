@@ -1,3 +1,4 @@
+/* Implement stack from scratch */
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
@@ -9,10 +10,31 @@ struct stack
 	int size ;
 };
 
+bool isEmpty(struct stack s)
+{
+	if(s.top==-1)
+	{
+		cout << "\nStack is empty " ;
+		return true ;
+	}
+	else 
+		return false ;
+}
+
+bool isFull(struct stack s)
+{
+	if(s.top==s.size-1)
+	{
+		cout << "\nStack is Full " ;
+		return true ;
+	}
+	else
+		return false ;
+}
 
 void push(struct stack &s,int number)
 {
-	if(s.top <= s.size)
+	if(!isFull(s))
 	{
 		cout << "\nInserted Element : " << number ;
 		s.data[++s.top] = number ;
@@ -25,7 +47,7 @@ void push(struct stack &s,int number)
 
 int pop(stack &s)
 {
-	if(s.top == -1)
+	if(isEmpty(s))
 	{
 		cout << "\nStack Underflow " ;
 		return -1 ;
@@ -52,7 +74,7 @@ int main()
 
 	struct stack s ;
 	s.top = -1 ;
-	s.size = 100 ;
+	s.size = 100 ;		// change size according to need
 	int numberOfElements ;
 	int number ;
 
