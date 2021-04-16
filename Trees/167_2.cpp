@@ -5,7 +5,6 @@
 #include<unistd.h>
 using namespace std;
 
-unsigned int microsecond = 1000000;
 struct bstNode
 {
 	bstNode* left ;
