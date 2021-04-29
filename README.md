@@ -12,7 +12,7 @@ These problems includes all the general topics
 that are asked by software product based companies 
 in their coding round as well as interview round.
 
-**Topics **are:
+**Topics** are:
 
 01. Arrays                            (006-053): 48 Problems
 02. Strigs                            (056-098): 43 Problems
